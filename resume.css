@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #181818;
+  color: #e0e0e0; /* Changed for better readability */
+}
+
+body p {
+  color: #8e44ad;
+}
+
+.container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 40px;
+  background: linear-gradient(145deg, #2d2d2d, #252525);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  border-image: linear-gradient(45deg, #8e44ad, #e74c3c) 1;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+form {
+  display: grid;
+  gap: 20px;
+}
+
+fieldset {
+  border: 2px solid #8e44ad;
+  border-radius: 15px;
+  padding: 20px;
+  background: linear-gradient(145deg, #2d2d2d, #252525);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
+}
+
+legend {
+  font-size: 1.5rem;
+  color: #e74c3c;
+  background: linear-gradient(145deg, #333, #222);
+  padding: 5px 10px;
+  border-radius: 14px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+fieldset:hover {
+  border-color: #e74c3c;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+  transform: translateY(-5px);
+}
+
+legend:hover {
+  background: linear-gradient(145deg, #444, #333);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #e0e0e0;
+  font-size: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background: #222;
+  color: #dcdcdc;
+  font-size: 1rem;
+}
+
+textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+button {
+  display: block;
+  margin: 30px auto;
+  padding: 12px 40px;
+  background: linear-gradient(135deg, #8e44ad, #e74c3c);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #9b59b6, #ff6f61);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  transform: translateY(-4px);
+}
+
+button:active {
+  background: linear-gradient(135deg, #732d91, #e63e3e);
+  transform: translateY(0);
+}.error-message {
+    color: #e74c3c;
+    font-size: 0.875rem;
+    margin-top: 5px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+.hidden {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  form {
+    gap: 15px;
+  }
+
+  fieldset {
+    padding: 15px;
+  }
+
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}

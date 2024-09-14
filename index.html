@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shareable Resume Builder</title>
+    <link rel="stylesheet" href="resume.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Shareable Resume Builder</h1>
+            <p>Create your resume by filling out the form below</p>
+        </header>
+
+        <form id="resumeForm">
+            <fieldset>
+                <legend>Personal Info</legend>
+                <label for="Username">Username:</label>
+                <input type="text" id="userName" name="Username" autocomplete="Username" required />
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" autocomplete="name" required />
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" autocomplete="email" required />
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" required />
+            </fieldset>
+
+            <fieldset>
+                <legend>Profile Picture</legend>
+                <label for="profilePic">Upload your profile picture:</label>
+                <input type="file" id="profilePic" name="profilePic" accept="image/*" />
+                <div id="profilePicPreview" class="hidden">
+                    <img id="profilePicImage" alt="Profile Picture" />
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Education</legend>
+                <label for="education">Education Details:</label>
+                <textarea id="education" name="education" autocomplete="off" required></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Work Experience</legend>
+                <label for="experience">Experience Details:</label>
+                <textarea id="experience" name="experience" autocomplete="off" required></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Skills</legend>
+                <label for="skills">Skills (comma-separated):</label>
+                <input type="text" id="skills" name="skills" autocomplete="off" required />
+            </fieldset>
+
+            <button type="submit">Generate Resume</button>
+        </form>
+
+        <div id="resumePreview" class="hidden">
+            <h2>Generated Resume</h2>
+            <div id="resumeContent">
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <script src="resume.js"></script>
+</body>
+</html>
